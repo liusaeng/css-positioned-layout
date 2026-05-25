@@ -1,1 +1,94 @@
-/* Start coding here */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Sarabun", sans-serif;
+}
+
+.chatroom-header {
+  background-color: #7b7b7b;
+  color: #ffffff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 24px;
+  font-weight: 400;
+  padding: 16px 24px;
+}
+
+.chatroom-body {
+  background-color: #ffffff;
+  min-height: calc(100vh - 64px);
+  padding: 24px;
+}
+
+.message-row {
+  display: flex;
+  margin-bottom: 12px;
+}
+
+.message-row.right {
+  justify-content: flex-end;
+}
+
+.message-row.left {
+  justify-content: flex-start;
+}
+
+.message-row.left:first-of-type {
+  margin-top: 36px;
+}
+
+.bubble {
+  position: relative;
+  width: 200px;
+  padding: 10px 16px;
+  font-size: 16px;
+  line-height: 1.4;
+  flex-shrink: 0;
+}
+
+.bubble-gray {
+  background-color: #808080;
+  color: #ffffff;
+  border-radius: 999px;
+}
+
+.bubble-green {
+  background-color: #12c912;
+  color: #ffffff;
+  border-radius: 20px;
+}
+
+.bubble-light-gray {
+  background-color: #e0e0e0;
+  color: #000000;
+  border-radius: 20px;
+}
+
+.bubble-tail::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -8px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid #12c912;
+  border-left: 10px solid transparent;
+}
+
+.close-btn {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: #c4c4c4;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+}
