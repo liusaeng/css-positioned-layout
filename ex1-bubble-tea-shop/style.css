@@ -1,5 +1,73 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: "Kanit";
+  font-family: "Kanit", sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
 }
 
 /* Start coding here */
+
+.bubble-tea-card {
+  position: relative;
+  width: 624px;
+  border: 5px solid #ffffff;
+  overflow: hidden;
+}
+
+.bubble-tea-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.gradient-overlay {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.85) 0%,
+    rgba(0, 0, 0, 0.45) 40%,
+    transparent 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+.shop-title {
+  position: absolute;
+  left: 12px;
+  bottom: 10px;
+  margin: 0;
+  color: #ffffff;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.3;
+  z-index: 2;
+}
+
+.location-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 4px 12px;
+  background-color: #555555;
+  color: #ffffff;
+  font-family: "Kanit", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 4px;
+  line-height: 1.4;
+  z-index: 2;
+}
